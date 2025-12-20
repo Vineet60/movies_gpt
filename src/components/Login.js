@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/UserSlice';
 import { USER_AVATAR } from '../utils/Constant';
-
+import { BG_URL } from '../utils/Constant';
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm ] = useState(true)
@@ -117,7 +117,7 @@ const handleButtonClick = () => {
       <Header/>
       <div className='absolute '>
       
-      <img src='https://assets.nflxext.com/ffe/siteui/vlv3/024bfb98-9e9d-441d-9c5f-d2c798d8e42f/web/IN-en-20251013-TRIFECTA-perspective_b6324826-0535-47c5-be5f-4f50e9663eaf_small.jpg'></img>
+      <img src={BG_URL}></img>
       </div>
       <form onSubmit={(e) => e.preventDefault()} className='absolute p-12 w-3/12 bg-black mx-auto my-36 right-0 left-0 text-white bg-opacity-85 rounded-lg'>
       <h1 className='font-bold text-3xl py-4'>{isSignInForm ? "Sign In" : "Sign up"}</h1>
